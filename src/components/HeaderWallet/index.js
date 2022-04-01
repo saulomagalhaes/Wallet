@@ -2,12 +2,14 @@ import React from 'react';
 import './styles.css';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import wallet from './wallet.jpg';
 
 class Header extends React.Component {
   render() {
     const { stateUser, stateCurrencies, stateExpenses } = this.props;
     return (
       <header className="header">
+        <img src={ wallet } alt="" />
         <p data-testid="email-field">
           {' '}
           {stateUser}

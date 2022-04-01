@@ -1,14 +1,21 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-.header{
-  display: flex;
-  justify-content: space-between;
+
+.header {
   align-items: center;
-  padding: 0 20px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
   height: 60px;
-  background: #fff;
-  box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.header img {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Header from '../components/HeaderWallet';
+import Form from '../components/ExpenseForm';
 import { fetchAPI } from '../actions/index';
 
 class Wallet extends React.Component {
@@ -11,7 +12,12 @@ class Wallet extends React.Component {
   }
 
   render() {
-    return <Header />;
+    return (
+      <>
+        <Header />
+        <Form />
+      </>
+    );
   }
 }
 

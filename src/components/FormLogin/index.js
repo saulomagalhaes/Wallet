@@ -54,9 +54,8 @@ class Form extends React.Component {
     const { email, password, disabled } = this.state;
     const { login, history } = this.props;
     return (
-      <form id="form-login">
+      <form className="form-login">
         <img src={ trybe } alt="Trybe" />
-        <h1>Login</h1>
         <input
           type="email"
           name="email"
@@ -101,3 +100,7 @@ Form.propTypes = {
 };
 
 export default connect(null, mapDispatchToProps)(Form);
+
+/* REFERENCIAS:
+LINHA 25 A 29: https://qawithexperts.com/article/javascript/email-validation-using-javascript-with-or-without-regex/317
+*/
