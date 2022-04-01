@@ -8,11 +8,11 @@ class Header extends React.Component {
   totalExpenses = () => {
     const { stateExpenses } = this.props;
     const valueAndCurrrency = stateExpenses.map((expense) => [
-      parseInt(expense.value, 10),
+      parseFloat(expense.value),
       expense.currency,
     ]);
-    const exchangeRates = Object.values(stateExpenses[0].exchangeRates);
-    const total = valueAndCurrrency.reduce((acc, curr) => {
+    const total = valueAndCurrrency.reduce((acc, curr, index) => {
+      const exchangeRates = Object.values(stateExpenses[index].exchangeRates);
       const [value, currency] = curr;
       const rate = exchangeRates.find((rates) => rates.code === currency);
       return acc + value * rate.ask;
