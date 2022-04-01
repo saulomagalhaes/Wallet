@@ -5,13 +5,46 @@
 }
 
 .form {
+  align-items: center;
   background: #9dda7a;
   border-radius: 5px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin: 0 auto;
   margin-top: 5px;
   padding: 20px;
-  width: 100%;
+}
+
+.form input {
+  align-self: center;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  font-size: 1.2rem;
+  margin-right: 5px;
+  padding: 10px;
+}
+
+.form select {
+  align-self: center;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  font-size: 1.2rem;
+  padding: 10px;
+}
+
+.form button {
+  align-self: flex-end;
+  background: #46bd01;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  color: white;
+  display: flex;
+  font-size: 1.2rem;
+  padding: 10px;
 }
