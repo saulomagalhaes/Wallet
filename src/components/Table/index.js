@@ -65,8 +65,6 @@ const mapStateToProps = (state) => ({
 });
 
 Table.propTypes = {
-  stateUser: PropTypes.string.isRequired,
-  stateCurrencies: PropTypes.arrayOf(PropTypes.string).isRequired,
   stateExpenses: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
