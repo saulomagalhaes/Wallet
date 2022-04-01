@@ -22,7 +22,7 @@ class Wallet extends React.Component {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  getFetchAPI: (state) => dispatch(fetchAPI(state)),
+  getFetchAPI: () => dispatch(fetchAPI()),
 });
 
 Wallet.propTypes = {

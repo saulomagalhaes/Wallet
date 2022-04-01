@@ -6,7 +6,7 @@
 
 .header {
   align-items: center;
-  background: white;
+  background: rgb(189, 180, 180);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   height: 60px;

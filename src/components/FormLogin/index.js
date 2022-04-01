@@ -43,10 +43,10 @@ class Form extends React.Component {
     this.setState({ disabled: true });
   };
 
-  saveUser = (event, callback) => {
+  saveUser = (event, login) => {
     const { email } = this.state;
     event.preventDefault();
-    callback(email);
+    login(email);
     this.setState({ email: '', password: '' });
   };
 

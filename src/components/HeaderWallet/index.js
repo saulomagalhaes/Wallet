@@ -5,6 +5,21 @@ import PropTypes from 'prop-types';
 import wallet from './wallet.jpg';
 
 class Header extends React.Component {
+  totalExpenses = () => {
+    const { stateExpenses } = this.props;
+    const valueAndCurrrency = stateExpenses.map((expense) => [
+      parseInt(expense.value, 10),
+      expense.currency,
+    ]);
+    const exchangeRates = Object.values(stateExpenses[0].exchangeRates);
+    const total = valueAndCurrrency.reduce((acc, curr) => {
+      const [value, currency] = curr;
+      const rate = exchangeRates.find((rates) => rates.code === currency);
+      return acc + value * rate.ask;
+    }, 0);
+    return total.toFixed(2);
+  };
+
   render() {
     const { stateUser, stateCurrencies, stateExpenses } = this.props;
     return (
@@ -16,11 +31,9 @@ class Header extends React.Component {
           {' '}
         </p>
         <p data-testid="total-field">
-          {stateExpenses.length > 0 ? stateExpenses.reduce((acc, curr) => acc + curr) : 0}
+          {stateExpenses.length === 0 ? 0 : this.totalExpenses()}
         </p>
-        <p data-testid="header-currency-field">
-          {stateCurrencies[0]}
-        </p>
+        <p data-testid="header-currency-field">{stateCurrencies[0]}</p>
       </header>
     );
   }
