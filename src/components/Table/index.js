@@ -25,7 +25,11 @@ class Table extends Component {
           <td>{parseFloat(total).toFixed(2)}</td>
           <td>Real</td>
           <td>
-            <button type="button" onClick={ () => this.deleteExpense(expense.id) }>
+            <button
+              type="button"
+              data-testid="edit-btn"
+              onClick={ () => this.deleteExpense(expense.id) }
+            >
               Editar
             </button>
             <button

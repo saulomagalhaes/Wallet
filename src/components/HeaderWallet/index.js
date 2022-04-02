@@ -21,7 +21,7 @@ class Header extends React.Component {
   };
 
   render() {
-    const { stateUser, stateCurrencies, stateExpenses } = this.props;
+    const { stateUser, stateExpenses } = this.props;
     return (
       <header className="header">
         <img src={ wallet } alt="" />
@@ -33,7 +33,7 @@ class Header extends React.Component {
         <p data-testid="total-field">
           {stateExpenses.length === 0 ? 0 : this.totalExpenses()}
         </p>
-        <p data-testid="header-currency-field">{stateCurrencies[0]}</p>
+        <p data-testid="header-currency-field">BRL</p>
       </header>
     );
   }
@@ -47,7 +47,6 @@ const mapStateToProps = (state) => ({
 
 Header.propTypes = {
   stateUser: PropTypes.string.isRequired,
-  stateCurrencies: PropTypes.arrayOf(PropTypes.string).isRequired,
   stateExpenses: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
