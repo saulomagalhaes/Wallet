@@ -74,6 +74,7 @@ class Edit extends React.Component {
           <select
             id="currency"
             name="currency"
+            data-testid="currency-input"
             onChange={ this.handleChange }
             value={ currency }
           >
@@ -151,7 +152,8 @@ const mapDispatchToProps = (dispatch) => ({
 
 Edit.propTypes = {
   stateCurrencies: PropTypes.arrayOf(PropTypes.string).isRequired,
-  getExchangeRates: PropTypes.func.isRequired,
+  editExpense: PropTypes.arrayOf(PropTypes.string).isRequired,
+  getEditExpense: PropTypes.func.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Edit);

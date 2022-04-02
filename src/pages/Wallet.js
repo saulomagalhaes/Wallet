@@ -35,6 +35,7 @@ const mapStateToProps = (state) => ({
 
 Wallet.propTypes = {
   getFetchAPI: PropTypes.func.isRequired,
+  getEdit: PropTypes.bool.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Wallet);

@@ -51,11 +51,15 @@ const wallet = (state = INITIAL_STATE, action) => {
       edit: action.edit,
     };
   case RECEIVE_EDIT_EXPENSE:
+  {
+    const expenses = [...state.expenses];
+    const expenseModify = expenses.filter((exp) => exp.id !== action.editExpense.id);
     return {
       ...state,
-      expenses: [...state.expenses, action.editExpense],
+      expenses: [...expenseModify, action.editExpense].sort((a, b) => a.id - b.id),
       edit: action.edit,
     };
+  }
   default:
     return state;
   }

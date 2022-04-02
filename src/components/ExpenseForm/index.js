@@ -60,6 +60,7 @@ class Form extends React.Component {
           <select
             id="currency"
             name="currency"
+            data-testid="currency-input"
             onChange={ this.handleChange }
             value={ currency }
           >
