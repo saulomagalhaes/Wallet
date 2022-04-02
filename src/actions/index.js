@@ -2,6 +2,7 @@
 export const RECEIVE_LOGIN = 'RECEIVE_LOGIN';
 export const RECEIVE_CURRENCIES = 'RECEIVE_CURRENCIES';
 export const FAILURE_RECEIVE_CURRENCIES = 'FAILURE_RECEIVE_CURRENCIES';
+export const DELETE_EXPENSE = 'DELETE_EXPENSE';
 
 export const RECEIVE_EXCHANGE_RATES = 'RECEIVE_EXCHANGE_RATES';
 
@@ -48,3 +49,8 @@ export function fetchExchangeRates(id, state) {
     .then((data) => dispatch(receiveExchangeRates(data, state, id)))
     .catch((error) => dispatch(failureReceiveCurrencies(error)));
 }
+
+export const deleteExpense = (id) => ({
+  type: DELETE_EXPENSE,
+  id,
+});

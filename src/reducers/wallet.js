@@ -2,6 +2,7 @@ import {
   RECEIVE_CURRENCIES,
   FAILURE_RECEIVE_CURRENCIES,
   RECEIVE_EXCHANGE_RATES,
+  DELETE_EXPENSE,
 } from '../actions/index';
 
 const INITIAL_STATE = {
@@ -32,6 +33,11 @@ const wallet = (state = INITIAL_STATE, action) => {
           exchangeRates: action.exchangeRates,
         },
       ],
+    };
+  case DELETE_EXPENSE:
+    return {
+      currencies: [...state.currencies],
+      expenses: state.expenses.filter((exp) => exp.id !== action.id),
     };
   default:
     return state;

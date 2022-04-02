@@ -3,3 +3,32 @@
   margin: 0;
   padding: 0;
 }
+
+.table {
+  background-color: rgb(169, 214, 255);
+  border-bottom: #999 solid 1px;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  max-width: 100%;
+  width: 100%;
+}
+
+.table th , .table td {
+  border-right: #999 solid 1px;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 8px;
+  text-align: center;
+}
+
+.table thead th {
+  background-color: #005dab;
+  color: white;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+/*
+REFERENCIAS: https://www.felipefialho.com/blog/tutorial-tabela-responsiva/
+*/
