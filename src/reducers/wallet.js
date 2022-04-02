@@ -6,6 +6,7 @@ import {
 } from '../actions/index';
 
 const INITIAL_STATE = {
+  edit: false,
   currencies: ['BRL'],
   expenses: [],
 };
