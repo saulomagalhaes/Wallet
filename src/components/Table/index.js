@@ -6,7 +6,7 @@ import { deleteExpense, editExpense } from '../../actions/index';
 
 class Table extends Component {
   generateData = () => {
-    const { stateExpenses, doDeleteExpense } = this.props;
+    const { stateExpenses, doDeleteExpense, doEditExpense } = this.props;
     return stateExpenses.map((expense, index) => {
       const exchangeRates = Object.values(stateExpenses[index].exchangeRates);
       const rate = exchangeRates.find(
@@ -28,7 +28,7 @@ class Table extends Component {
             <button
               type="button"
               data-testid="edit-btn"
-              onClick={ () => this.doEditExpense(expense) }
+              onClick={ () => doEditExpense(expense) }
             >
               Editar
             </button>

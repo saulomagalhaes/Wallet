@@ -2,9 +2,10 @@
 export const RECEIVE_LOGIN = 'RECEIVE_LOGIN';
 export const RECEIVE_CURRENCIES = 'RECEIVE_CURRENCIES';
 export const FAILURE_RECEIVE_CURRENCIES = 'FAILURE_RECEIVE_CURRENCIES';
-export const DELETE_EXPENSE = 'DELETE_EXPENSE';
-
 export const RECEIVE_EXCHANGE_RATES = 'RECEIVE_EXCHANGE_RATES';
+export const DELETE_EXPENSE = 'DELETE_EXPENSE';
+export const EDIT_EXPENSE = 'EDIT_EXPENSE';
+export const RECEIVE_EDIT_EXPENSE = 'RECEIVE_EDIT_EXPENSE';
 
 export const requestLogin = (email) => ({
   type: RECEIVE_LOGIN,
@@ -54,3 +55,18 @@ export const deleteExpense = (id) => ({
   type: DELETE_EXPENSE,
   id,
 });
+
+export const editExpense = (expense) => ({
+  type: EDIT_EXPENSE,
+  editExpense: expense,
+  edit: true,
+});
+
+export const receiveEditExpense = (expense) => {
+  const values = { ...expense };
+  return {
+    type: RECEIVE_EDIT_EXPENSE,
+    editExpense: values,
+    edit: false,
+  };
+};

@@ -3,9 +3,12 @@ import {
   FAILURE_RECEIVE_CURRENCIES,
   RECEIVE_EXCHANGE_RATES,
   DELETE_EXPENSE,
+  EDIT_EXPENSE,
+  RECEIVE_EDIT_EXPENSE,
 } from '../actions/index';
 
 const INITIAL_STATE = {
+  editExpense: {},
   edit: false,
   currencies: ['BRL'],
   expenses: [],
@@ -34,11 +37,24 @@ const wallet = (state = INITIAL_STATE, action) => {
           exchangeRates: action.exchangeRates,
         },
       ],
+      edit: false,
     };
   case DELETE_EXPENSE:
     return {
       currencies: [...state.currencies],
       expenses: state.expenses.filter((exp) => exp.id !== action.id),
+    };
+  case EDIT_EXPENSE:
+    return {
+      ...state,
+      editExpense: action.editExpense,
+      edit: action.edit,
+    };
+  case RECEIVE_EDIT_EXPENSE:
+    return {
+      ...state,
+      expenses: [...state.expenses, action.editExpense],
+      edit: action.edit,
     };
   default:
     return state;
