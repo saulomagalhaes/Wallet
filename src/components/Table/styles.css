@@ -4,6 +4,16 @@
   padding: 0;
 }
 
+@media ( max-width : 768px ) {
+
+  .table {
+    margin-bottom: 1rem;
+    max-width: 100%;
+    width: 100%;
+
+  }
+}
+
 .table {
   background-color: #eff8ff;
   border-bottom: #999 solid 1px;
@@ -36,14 +46,30 @@
   color: white;
   cursor: pointer;
   font-size: 14px;
+  font-weight: 600;
   margin-right: 2px;
-  padding: 5px;
+  padding: 8px;
+}
+
+.table button:first-child {
+  background: #0f9afe;
 }
 
 .table button:hover {
-  background-color: #0081dd;
+  background: #0079d0;
+
+}
+
+.table button:last-child {
+  background: #ee3434;
+}
+
+.table button:hover:last-child {
+  background: #ff1b1b;
+
 }
 
 /*
 REFERENCIAS: https://www.felipefialho.com/blog/tutorial-tabela-responsiva/
 */
+

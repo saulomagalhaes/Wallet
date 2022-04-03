@@ -5,6 +5,7 @@ import Header from '../components/HeaderWallet';
 import Form from '../components/ExpenseForm';
 import Edit from '../components/EditExpense';
 import Table from '../components/Table';
+import Footer from '../components/Footer';
 import { fetchAPI } from '../actions/index';
 
 class Wallet extends React.Component {
@@ -20,6 +21,7 @@ class Wallet extends React.Component {
         <Header />
         {getEdit ? <Edit /> : <Form />}
         <Table />
+        <Footer />
       </>
     );
   }
