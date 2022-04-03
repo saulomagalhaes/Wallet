@@ -6,13 +6,12 @@
 
 .form {
   align-items: center;
-  background: #9dda7a;
+  background: #eff8ff;
   border-radius: 5px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  margin-top: 5px;
   padding: 20px;
 }
 
@@ -29,6 +28,7 @@
 
 .form select {
   align-self: center;
+  background: white;
   border: none;
   border-radius: 5px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -39,14 +39,17 @@
 
 .form button {
   align-self: flex-end;
-  background: #46bd01;
+  background: #0f9afe;
   border: none;
-  border-radius: 5px;
+  border-radius: 15px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   color: white;
   cursor: pointer;
   display: flex;
   font-size: 1.2rem;
-  padding: 10px;
+  padding: 15px;
 }
 
+.form button:hover {
+  background: #0081dd;
+}

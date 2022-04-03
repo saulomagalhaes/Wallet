@@ -24,13 +24,17 @@ class Header extends React.Component {
     const { stateUser, stateExpenses } = this.props;
     return (
       <header className="header">
-        <img src={ wallet } alt="" />
+        <div>
+          <img src={ wallet } alt="" />
+          <p>Trybe Wallet</p>
+        </div>
         <p data-testid="email-field">
           {' '}
           {stateUser}
           {' '}
         </p>
         <p data-testid="total-field">
+          Valor Total: R$
           {stateExpenses.length === 0 ? 0 : this.totalExpenses()}
         </p>
         <p data-testid="header-currency-field">BRL</p>

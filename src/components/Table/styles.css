@@ -5,7 +5,7 @@
 }
 
 .table {
-  background-color: rgb(169, 214, 255);
+  background-color: #eff8ff;
   border-bottom: #999 solid 1px;
   border-collapse: collapse;
   margin-bottom: 20px;
@@ -23,10 +23,25 @@
 }
 
 .table thead th {
-  background-color: #005dab;
+  background-color: #0f9afe;
   color: white;
   font-size: 15px;
   font-weight: 400;
+}
+
+.table button {
+  background-color: #0f9afe;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 2px;
+  padding: 5px;
+}
+
+.table button:hover {
+  background-color: #0081dd;
 }
 
 /*
