@@ -32,6 +32,7 @@ const Content = styled.div`
       padding: 0 15px;
       margin-bottom: 15px;
       background: var(--input);
+      color: var(--text-input);
 
       &::placeholder {
         color: var(--placeholder);

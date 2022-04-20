@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
     --blue-light: #6933ff;
     
     --input: #004643;
+    --text-input:#fffffe;
     --placeholder:#fffffe;
     --label:#001e1d;
 
