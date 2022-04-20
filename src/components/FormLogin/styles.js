@@ -21,7 +21,7 @@ const Content = styled.div`
     border-radius: 1rem;
     padding: 2rem;
     height: 50rem;
-    max-width: 30rem;
+    width: clamp(30rem, 90%, 50rem);
    
 
     input {
