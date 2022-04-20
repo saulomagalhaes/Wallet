@@ -20,8 +20,9 @@ const Content = styled.div`
     background: var(--shape);
     border-radius: 1rem;
     padding: 2rem;
-    height: 60%;
-    width: 60%;
+    height: 50rem;
+    max-width: 30rem;
+   
 
     input {
       width: 100%;
@@ -34,7 +35,7 @@ const Content = styled.div`
 
       &::placeholder {
         color: var(--placeholder);
-        font-size: 1rem;
+        font-size: 1.4rem;
       }
     }
 
@@ -46,7 +47,7 @@ const Content = styled.div`
       background: var(--button);
       color: var(--text-button);
       font-weight: 600;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
     }
   }
 `;
