@@ -1,8 +1,8 @@
 import React from 'react';
-import './styles.css';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import trybe from './trybe.png';
+import Content from './styles';
+import walletImg from './wallet.svg';
 import { requestLogin } from '../../actions';
 
 class Form extends React.Component {
@@ -54,38 +54,41 @@ class Form extends React.Component {
     const { email, password, disabled } = this.state;
     const { login, history } = this.props;
     return (
-      <form className="form-login">
-        <img src={ trybe } alt="Trybe" />
-        <input
-          type="email"
-          name="email"
-          className="input-email"
-          data-testid="email-input"
-          placeholder="Email"
-          onChange={ this.handleChange }
-          value={ email }
-        />
-        <input
-          type="password"
-          name="password"
-          className="input-password"
-          data-testid="password-input"
-          placeholder="Senha"
-          onChange={ this.handleChange }
-          value={ password }
-          autoComplete="on"
-        />
-        <button
-          type="submit"
-          disabled={ disabled }
-          onClick={ (event) => {
-            this.saveUser(event, login);
-            return history.push('/carteira');
-          } }
-        >
-          Entrar
-        </button>
-      </form>
+      <Content>
+        <form className="form-login">
+          <img src={ walletImg } alt="Trybe" />
+          <a hidden href="https://storyset.com/money">Money illustrations by Storyset</a>
+          <input
+            type="email"
+            name="email"
+            className="input-email"
+            data-testid="email-input"
+            placeholder="Email"
+            onChange={ this.handleChange }
+            value={ email }
+          />
+          <input
+            type="password"
+            name="password"
+            className="input-password"
+            data-testid="password-input"
+            placeholder="Senha"
+            onChange={ this.handleChange }
+            value={ password }
+            autoComplete="on"
+          />
+          <button
+            type="submit"
+            disabled={ disabled }
+            onClick={ (event) => {
+              this.saveUser(event, login);
+              return history.push('/carteira');
+            } }
+          >
+            Entrar
+          </button>
+        </form>
+      </Content>
     );
   }
 }
