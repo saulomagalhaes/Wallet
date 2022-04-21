@@ -16,15 +16,15 @@ class Table extends Component {
       const total = expense.value * ask;
       return (
         <tr key={ expense.id }>
-          <td>{expense.description}</td>
-          <td>{expense.tag}</td>
-          <td>{expense.method}</td>
-          <td>{parseFloat(expense.value).toFixed(2)}</td>
-          <td>{name}</td>
-          <td>{parseFloat(ask).toFixed(2)}</td>
-          <td>{parseFloat(total).toFixed(2)}</td>
-          <td>Real</td>
-          <td>
+          <td data-label="Descrição">{expense.description}</td>
+          <td data-label="Categoria">{expense.tag}</td>
+          <td data-label="Forma de Pagamento">{expense.method}</td>
+          <td data-label="Valor">{parseFloat(expense.value).toFixed(2)}</td>
+          <td data-label="Conversão">{name}</td>
+          <td data-label="Cotação">{parseFloat(ask).toFixed(2)}</td>
+          <td data-label="Total">{parseFloat(total).toFixed(2)}</td>
+          <td data-label="Moeda">Real</td>
+          <td data-label="Opções">
             <button
               type="button"
               data-testid="edit-btn"

@@ -8,6 +8,9 @@ const GlobalStyle = createGlobalStyle`
 
     --blue-light: #6933ff;
     
+    --header:#004643;
+    --text-header:#fffffe;
+
     --input: #004643;
     --text-input:#fffffe;
     --placeholder:#fffffe;
@@ -27,7 +30,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html {
-    font-size: 62.5%;
+    font-size: 62.5%; // 10PX = 1REM
   }
 
   body{

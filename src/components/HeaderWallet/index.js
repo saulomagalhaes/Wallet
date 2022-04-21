@@ -1,7 +1,7 @@
 import React from 'react';
-import './styles.css';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import Container from './styles';
 import wallet from './wallet.jpg';
 
 class Header extends React.Component {
@@ -23,22 +23,24 @@ class Header extends React.Component {
   render() {
     const { stateUser, stateExpenses } = this.props;
     return (
-      <header className="header">
-        <div>
+      <Container>
+        <div className="title">
           <img src={ wallet } alt="" />
-          <p>Trybe Wallet</p>
+          <h1>My Wallet</h1>
         </div>
-        <p data-testid="email-field">
-          {' '}
-          {stateUser}
-          {' '}
-        </p>
-        <p data-testid="total-field">
-          Valor Total: R$
-          {stateExpenses.length === 0 ? 0 : this.totalExpenses()}
-        </p>
-        <p data-testid="header-currency-field">BRL</p>
-      </header>
+        <div className="infos">
+          <p data-testid="email-field">
+            {' '}
+            {stateUser}
+            {' '}
+          </p>
+          <p data-testid="total-field">
+            Valor Total: R$
+            {stateExpenses.length === 0 ? 0 : this.totalExpenses()}
+          </p>
+          <p data-testid="header-currency-field">Moeda: BRL</p>
+        </div>
+      </Container>
     );
   }
 }
