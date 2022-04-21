@@ -29,16 +29,16 @@ class Header extends React.Component {
           <h1>My Wallet</h1>
         </div>
         <div className="infos">
-          <p data-testid="email-field">
-            {' '}
-            {stateUser}
-            {' '}
-          </p>
           <p data-testid="total-field">
             Valor Total: R$
             {stateExpenses.length === 0 ? 0 : this.totalExpenses()}
           </p>
           <p data-testid="header-currency-field">Moeda: BRL</p>
+          <p data-testid="email-field">
+            {' '}
+            {stateUser}
+            {' '}
+          </p>
         </div>
       </Container>
     );

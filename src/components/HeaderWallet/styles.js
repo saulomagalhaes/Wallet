@@ -13,7 +13,7 @@ const Container = styled.header`
   div.title {
     display: flex;
     align-items: center;
-    width: 60%;
+    width: 55%;
 
     img {
       width: 5rem;
@@ -27,9 +27,8 @@ const Container = styled.header`
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
-    width: 40%;
-    font-size: 1.4rem;
-    margin-top: 2.2rem;
+    width: 45%;
+    font-size: 1rem;
   }
 `;
 
