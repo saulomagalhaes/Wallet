@@ -2,6 +2,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { toast } from 'react-toastify';
 import Container from './styles';
 import { fetchExchangeRates } from '../../actions';
 
@@ -26,6 +27,9 @@ class Form extends React.Component {
   saveExpense = (event, getExchangeRates) => {
     const { value, currency, method, tag, description, id } = this.state;
     event.preventDefault();
+    if (description === '') {
+      return toast.error('Preencha a descrição da despesa');
+    }
     getExchangeRates(id, { value, currency, method, tag, description });
     this.setState((prevState) => (
       { ...prevState, value: '', id: prevState.id + 1 }

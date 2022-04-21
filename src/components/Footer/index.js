@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import './styles.css';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import Container from './styles';
 
 class Footer extends Component {
   render() {
     return (
-      <footer className="footer">
+      <Container className="footer">
         <div>
           <a href="https://github.com/saulomagalhaes" target="_blank" rel="noopener noreferrer">
             <FaGithub size={ 35 } color="black" />
@@ -15,7 +15,7 @@ class Footer extends Component {
           </a>
         </div>
         <p>Desenvolvido por Saulo Alves Magalhães</p>
-      </footer>
+      </Container>
     );
   }
 }

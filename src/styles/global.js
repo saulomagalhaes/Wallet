@@ -3,18 +3,19 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
   :root {
     --red: #e52e4d;
-    --blue: #5429cc;
-    --green: #33CC95;
 
-    --blue-light: #6933ff;
-    
     --header:#004643;
     --text-header:#fffffe;
 
     --input: #004643;
-    --text-input:#fffffe;
-    --placeholder:#fffffe;
+    --select: #004643;
     --label:#001e1d;
+
+    --text-input:#fffffe;
+    --text-select:#fffffe;
+    --placeholder:#fffffe;
+
+    --table: #004643;
 
     --button: #f9bc60;
     --text-button: #001e1d;

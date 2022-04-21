@@ -32,16 +32,17 @@ const Container = styled.section`
     }
 
     tr {
-      background-color: #f8f8f8;
-      border: 1px solid #ddd;
-      border-bottom: 3px solid #ddd;
+      background: var(--table);
+      border: 1px solid #001e1d;
+      border-bottom: 3px solid #001e1d;
       display: block;
       margin-bottom: 0.625rem;
       padding: 0.35rem;
+      color: white;
     }
 
     td {
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid #001e1d;
       display: block;
       font-size: 1.4rem;
       text-align: right;
@@ -60,14 +61,15 @@ const Container = styled.section`
     }
 
     button:first-child {
-      background: #0f9afe;
+      background: var(--button);
       border: 0;
       border-radius: 0.25rem;
       margin-right: 0.3rem;
       padding: 0.3rem;
+      color: var(--text-button);
 
       &:hover {
-        background: #0079d0;
+        filter: brightness(0.9);
       }
     }
     button:last-child {
@@ -75,9 +77,10 @@ const Container = styled.section`
       border: 0;
       border-radius: 0.25rem;
       padding: 0.3rem;
+      color: var(--text-button);
 
       &:hover {
-        background: #ff1b1b;
+        filter: brightness(0.9);
       }
     }
   }
