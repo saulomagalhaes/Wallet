@@ -26,9 +26,10 @@ const Container = styled.header`
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 45%;
-    font-size: 1rem;
+    height: 100%;
+    font-size: clamp(1.1rem, 3.3vw, 1.5rem);
   }
 `;
 

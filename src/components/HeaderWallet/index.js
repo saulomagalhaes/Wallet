@@ -25,7 +25,7 @@ class Header extends React.Component {
     return (
       <Container>
         <div className="title">
-          <img src={ wallet } alt="" />
+          <img src={ wallet } alt="Carteira" />
           <h1>My Wallet</h1>
         </div>
         <div className="infos">

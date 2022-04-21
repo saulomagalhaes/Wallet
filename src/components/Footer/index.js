@@ -8,10 +8,10 @@ class Footer extends Component {
       <Container className="footer">
         <div>
           <a href="https://github.com/saulomagalhaes" target="_blank" rel="noopener noreferrer">
-            <FaGithub size={ 35 } color="black" />
+            <FaGithub size={ 35 } color="white" />
           </a>
           <a href="https://www.linkedin.com/in/sauloam/" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin size={ 35 } color="black" />
+            <FaLinkedin size={ 35 } color="white" />
           </a>
         </div>
         <p>Desenvolvido por Saulo Alves Magalhães</p>

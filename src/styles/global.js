@@ -20,6 +20,8 @@ const GlobalStyle = createGlobalStyle`
     --button: #f9bc60;
     --text-button: #001e1d;
     
+    --footer: #004643;
+
     --background: #abd1c6;
     --shape: #fffffe;
   }
