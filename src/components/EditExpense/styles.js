@@ -3,8 +3,7 @@ import styled from 'styled-components';
 const Container = styled.section`
   display: flex;
   padding: 1rem 1rem;
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
 
   form {
     display: flex;
@@ -59,6 +58,11 @@ const Container = styled.section`
       background: var(--button);
       color: var(--text-button);
     }
+  }
+
+  @media (min-width: 992px) {
+    width: 80%;
+    margin: 0 auto;
   }
 `;
 

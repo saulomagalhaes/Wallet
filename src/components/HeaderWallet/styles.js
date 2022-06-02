@@ -4,12 +4,11 @@ const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
   padding: 0 1rem;
   height: 8rem;
   background: var(--header);
   color: var(--text-header);
-  margin: 0 auto;
+  width: 100%;
 
   div.title {
     display: flex;
@@ -31,6 +30,11 @@ const Container = styled.header`
     width: 45%;
     height: 100%;
     font-size: clamp(1.1rem, 3.3vw, 1.5rem);
+  }
+
+  @media (min-width: 992px) {
+    width: 80%;
+    margin: 0 auto;
   }
 `;
 

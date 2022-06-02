@@ -11,10 +11,15 @@ const Container = styled.footer`
   font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
-  margin-top: 8.1rem;
+  margin-top: 12rem;
+
   a {
     margin-left: 1rem;
     margin-right: 1rem;
+  }
+
+  @media (min-width: 992px) {
+    margin-top: 8.1rem;
   }
 `;
 
