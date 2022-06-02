@@ -4,11 +4,12 @@ const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 80%;
   padding: 0 1rem;
   height: 8rem;
   background: var(--header);
   color: var(--text-header);
+  margin: 0 auto;
 
   div.title {
     display: flex;

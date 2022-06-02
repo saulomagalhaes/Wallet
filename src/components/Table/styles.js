@@ -6,10 +6,10 @@ const Container = styled.section`
   table {
     border: none;
     border-collapse: collapse;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     table-layout: fixed;
-    width: 100%;
+    width: 80%;
 
     thead,
     td {

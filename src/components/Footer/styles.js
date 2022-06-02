@@ -11,6 +11,7 @@ const Container = styled.footer`
   font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
+  margin-top: 8.1rem;
   a {
     margin-left: 1rem;
     margin-right: 1rem;
