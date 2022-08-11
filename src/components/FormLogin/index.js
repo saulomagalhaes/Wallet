@@ -22,7 +22,7 @@ class Form extends React.Component {
 
   validateEmail = () => {
     const { email } = this.state;
-    const regex = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i;
+    const regex = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i;
     return regex.test(email);
   }
 

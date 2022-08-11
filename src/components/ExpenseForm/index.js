@@ -1,16 +1,16 @@
 /* eslint-disable react/jsx-max-depth */
+import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
 import { toast } from 'react-toastify';
-import Container from './styles';
 import { fetchExchangeRates } from '../../actions';
+import Container from './styles';
 
 class Form extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: '',
+      value: 0,
       currency: '',
       method: '',
       tag: '',
