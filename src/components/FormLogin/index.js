@@ -1,9 +1,9 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
+import { requestLogin } from '../../actions';
 import Content from './styles';
 import walletImg from './wallet.svg';
-import { requestLogin } from '../../actions';
 
 class Form extends React.Component {
   constructor(props) {
@@ -22,13 +22,8 @@ class Form extends React.Component {
 
   validateEmail = () => {
     const { email } = this.state;
-    const atSymbol = email.indexOf('@');
-    const dot = email.indexOf('.');
-    if (atSymbol < 1) return false;
-    if (dot <= atSymbol + 2) return false;
-    if (dot === email.length - 1) return false;
-
-    return true;
+    const regex = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i;
+    return regex.test(email);
   }
 
   validateInputs = () => {
@@ -36,7 +31,7 @@ class Form extends React.Component {
     const minLength = 6;
     const isValidEmail = this.validateEmail();
 
-    if (password.length === minLength && isValidEmail === true) {
+    if (password.length >= minLength && isValidEmail === true) {
       return this.setState({ disabled: false });
     }
 
