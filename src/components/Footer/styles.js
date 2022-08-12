@@ -19,7 +19,10 @@ const Container = styled.footer`
   }
 
   @media (min-width: 992px) {
-    margin-top: 8.1rem;
+    margin-top: 11.3rem;
+  }
+  @media (min-width: 1200px) {
+    margin-top: 39.3rem;
   }
 `;
 
