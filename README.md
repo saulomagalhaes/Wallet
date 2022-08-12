@@ -8,7 +8,7 @@ Projeto de uma carteira de despesas feito em React com conversão de moeda integ
 
 ## Deploy
 
-Link do projeto em funcionamento https://wallet-navy-nine.vercel.app/
+Veja o  projeto em funcionamento https://wallet-navy-nine.vercel.app/
 
 ## Autor
 
