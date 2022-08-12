@@ -21,7 +21,7 @@ const Container = styled.footer`
   @media (min-width: 992px) {
     margin-top: 11.3rem;
   }
-  @media (min-width: 1200px) {
+  @media (min-width: 1380px) {
     margin-top: 39.3rem;
   }
 `;
